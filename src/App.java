@@ -1,5 +1,4 @@
 
-
 public class App {
     public static void main(String[] args) throws Exception {
         runIntTree();
@@ -7,21 +6,6 @@ public class App {
 
     private static void runIntTree() {
         IntTree arbolNumeros = new IntTree(); /// CLASE ARBOL
-
-        // Node<Integer> node3 = new Node<>(30);
-        // Node<Integer> node4 = new Node<>(40);
-        // Node<Integer> node5 = new Node<>(50);
-
-        // Node<Integer> root = arbolNumeros.getRoot();
-
-        // root.setLeft(node2);
-        // root.setRight(node3);
-
-        // node2.setLeft(node4);
-        // node4.setRight(node5);
-
-        //// ERROR GENERA CLICLOS
-        // node5.setLeft(root);
 
         arbolNumeros.insert(10);
         arbolNumeros.insert(5);
@@ -35,5 +19,12 @@ public class App {
         arbolNumeros.preOrder();
         System.out.println("Pos Order");
         arbolNumeros.posOrder();
+    }
+    private static void runPersonTree(){
+        BinariTree<Person> persoTree = new BinariTree<>();
+        persoTree.insert(new Person("Alice", 30));
+        persoTree.insert(new Person("Bob", 25));
+        persoTree.insert(new Person("Diego", 35));
+        persoTree.insert(new Person("Rafae", 35));
     }
 }
