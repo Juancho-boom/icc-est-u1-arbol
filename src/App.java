@@ -2,6 +2,7 @@
 public class App {
     public static void main(String[] args) throws Exception {
         runIntTree();
+        runEjercicios();
     }
 
     private static void runIntTree() {
@@ -26,5 +27,12 @@ public class App {
         persoTree.insert(new Person("Bob", 25));
         persoTree.insert(new Person("Diego", 35));
         persoTree.insert(new Person("Rafae", 35));
+
+    }
+
+    public static void runEjercicios(){
+        Ejercicio1 ejercicio1 = new Ejercicio1();
+        int[] numeros = new int[]{5,3,7,2,4,6,8};
+        ejercicio1.insert(numeros);
     }
 }
