@@ -19,8 +19,9 @@ public class Ejercicio1 {
     }
 
     private void printTreeRecursivo(Node<Integer> actual, int nivel) {
-        if (actual == null) return;
-
+        if (actual == null) {
+            return;
+        }
         printTreeRecursivo(actual.getRight(), nivel + 1);
 
         for (int i = 0; i < nivel; i++) {
