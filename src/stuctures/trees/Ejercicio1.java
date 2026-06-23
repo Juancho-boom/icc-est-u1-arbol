@@ -1,3 +1,6 @@
+package stuctures.trees;
+import stuctures.node.Node;
+
 public class Ejercicio1 {
 
     public void insert(int[] numeros) {

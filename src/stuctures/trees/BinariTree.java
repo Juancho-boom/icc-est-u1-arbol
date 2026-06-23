@@ -1,4 +1,7 @@
+package stuctures.trees;
 import java.util.Random;
+
+import stuctures.node.Node;
 
 public class BinariTree<T extends Comparable<T>> {
 

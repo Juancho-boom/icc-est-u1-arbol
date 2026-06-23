@@ -1,6 +1,9 @@
+package stuctures.trees;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Random;
+
+import stuctures.node.Node;
 
 public class IntTree {
     private Node<Integer> root;

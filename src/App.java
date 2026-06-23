@@ -1,3 +1,7 @@
+import models.Person;
+import stuctures.trees.BinariTree;
+import stuctures.trees.Ejercicio1;
+import stuctures.trees.IntTree;
 
 public class App {
     public static void main(String[] args) throws Exception {

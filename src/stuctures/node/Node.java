@@ -1,3 +1,4 @@
+package stuctures.node;
 
 
 // NODO para arboles binarios

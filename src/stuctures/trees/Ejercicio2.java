@@ -1,3 +1,6 @@
+package stuctures.trees;
+import stuctures.node.Node;
+
 public class Ejercicio2 {
 
     public Node<Integer> invert(Node<Integer> root) {
