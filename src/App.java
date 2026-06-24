@@ -1,3 +1,6 @@
+import java.util.Set;
+
+import colletion.set.Sets;
 import models.Person;
 import stuctures.trees.BinariTree;
 import stuctures.trees.Ejercicio1;
@@ -10,6 +13,22 @@ public class App {
         runIntTree();
         runEjercicios();
         runEjercicios3y4(); // <- Ejecutamos tus nuevos ejercicios aquí
+    }
+
+    private static void runSets(){
+        Sets sets  = new Sets();
+
+        System.out.println("HashSets"+ sets.construirHashSet());
+        Set<String> hashSet = sets.construirHashSet();
+        System.out.println(hashSet);
+        System.out.println("Tamaño: " + hashSet.size());
+        System.out.println(hashSet.contains("F"));
+
+        System.out.println("LinkedHashSet: " + sets.construirLinkedHashSet());
+        Set<String> lhSet = sets.construirLinkedHashSet();
+        System.out.println(lhSet);
+        System.out.println("Tamaño: " + lhSet.size());
+        System.out.println(lhSet.contains("A"));
     }
 
     private static void runIntTree() {
