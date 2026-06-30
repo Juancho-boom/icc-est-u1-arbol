@@ -4,6 +4,7 @@ import stuctures.node.Node;
 
 public class Ejercicio3 {
 
+    // Método principal para iniciar la búsqueda DFS
     public static <T extends Comparable<T>> boolean dfs(BinariTree<T> tree, T target) {
         if (tree.isEmpty()) {
             return false;
@@ -11,6 +12,7 @@ public class Ejercicio3 {
         return dfsRecursivo(tree.getRoot(), target);
     }
 
+    // DFS adaptado para tu IntTree (por si quieres usar el de enteros primitivos)
     public static boolean dfsInt(IntTree tree, Integer target) {
         if (tree.isEmpty()) {
             return false;

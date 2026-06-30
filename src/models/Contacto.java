@@ -40,7 +40,12 @@ public class Contacto {
         return "Contacto [nombre=" + nombre + ", apellido=" + apellido + ", telefono=" + telefono + "]";
     }
 
+<<<<<<< HEAD
     public int compareTo(Contacto otro) {
+=======
+    @Override
+    public int compareTo(Contacto otro){
+>>>>>>> a65bee2c3baaabcff1428f9de54af87471ee4478
         return this.nombre.compareTo(otro.getNombre());
     }
 
@@ -81,4 +86,9 @@ public class Contacto {
         return true;
     }
     
+<<<<<<< HEAD
 }   
+=======
+}   
+
+>>>>>>> a65bee2c3baaabcff1428f9de54af87471ee4478
