@@ -1,52 +1,46 @@
 import java.util.Set;
 
-<<<<<<< HEAD
 import Collection.maps.Maps;
 import Collection.set.Sets;
 import models.Person;
+import stuctures.graphs.Graph;
 import stuctures.trees.BinariTree;
 import stuctures.trees.Ejercicio1;
 import stuctures.trees.Ejercicio3;
 import stuctures.trees.Ejercicio4;
-=======
-import colletion.set.Sets;
-import models.Person;
-import stuctures.trees.BinariTree;
-import stuctures.trees.Ejercicio1;
-import stuctures.trees.Ejercicio3; // <- Importamos Ejercicio 3
-import stuctures.trees.Ejercicio4; // <- Importamos Ejercicio 4
->>>>>>> a65bee2c3baaabcff1428f9de54af87471ee4478
 import stuctures.trees.IntTree;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        runIntTree();
-        runEjercicios();
-<<<<<<< HEAD
-        runPersonTree();
-        runEjercicios3y4();
-        runSets();
-        runMap();
-=======
-        runEjercicios3y4(); // <- Ejecutamos tus nuevos ejercicios aquí
+      //  runIntTree();
+      //  runEjercicios();
+       // runPersonTree();
+       // runEjercicios3y4();
+       // runSets();
+        //runMap();
+        runGraph();
     }
+    
 
-    private static void runSets(){
-        Sets sets  = new Sets();
+    private static void runGraph() {
+        Graph<String> g = new Graph<>();
 
-        System.out.println("HashSets"+ sets.construirHashSet());
-        Set<String> hashSet = sets.construirHashSet();
-        System.out.println(hashSet);
-        System.out.println("Tamaño: " + hashSet.size());
-        System.out.println(hashSet.contains("F"));
+        g.add("A");
+        g.add("B");
+        g.add("C");
+        g.add("D");
+        g.add("J");
 
-        System.out.println("LinkedHashSet: " + sets.construirLinkedHashSet());
-        Set<String> lhSet = sets.construirLinkedHashSet();
-        System.out.println(lhSet);
-        System.out.println("Tamaño: " + lhSet.size());
-        System.out.println(lhSet.contains("A"));
->>>>>>> a65bee2c3baaabcff1428f9de54af87471ee4478
+        g.addConexion("J","D");
+        g.addConexion("C", "D");
+        g.addConexionUni("A", "B");
+        g.addConexionUni("B", "C");
+        g.addConexionUni("B", "D");
+        g.addConexionUni("C", "A");
+
+        g.printGraph();
     }
+    
 
     public static void runMap(){
         Maps maps = new Maps();
@@ -59,7 +53,7 @@ public class App {
     private static void runSets(){
         Sets sets  = new Sets();
 
-        System.out.println("HashSets"+ sets.construirHashSet());
+        System.out.println("HashSets: " + sets.construirHashSet());
         Set<String> hashSet = sets.construirHashSet();
         System.out.println(hashSet);
         System.out.println("Tamaño: " + hashSet.size());
@@ -71,6 +65,7 @@ public class App {
         System.out.println("Tamaño: " + lhSet.size());
         System.out.println(lhSet.contains("A"));
     }
+
     private static void runIntTree() {
         IntTree arbolNumeros = new IntTree();
 
@@ -81,7 +76,7 @@ public class App {
         arbolNumeros.insert(20);
         arbolNumeros.insert(15);
 
-        System.out.println("pre Order");
+        System.out.println("Pre Order");
         arbolNumeros.preOrder();
         System.out.println("Pos Order");
         arbolNumeros.posOrder();
@@ -92,7 +87,7 @@ public class App {
         persoTree.insert(new Person("Alice", 30));
         persoTree.insert(new Person("Bob", 25));
         persoTree.insert(new Person("Diego", 35));
-        persoTree.insert(new Person("Rafae", 35));
+        persoTree.insert(new Person("Rafael", 35));
     }
 
     public static void runEjercicios(){
@@ -101,15 +96,9 @@ public class App {
         ejercicio1.insert(numeros);
     }
 
-<<<<<<< HEAD
-    public static void runEjercicios3y4() {
-=======
-    // NUEVO MÉTODO PARA EVALUAR TU EJERCICIO 3 Y 4
     public static void runEjercicios3y4() {
         System.out.println("\n=== EJERCICIO 3 Y 4: BUSQUEDAS DFS Y BFS ===");
         
-        // Creamos un árbol genérico de prueba
->>>>>>> a65bee2c3baaabcff1428f9de54af87471ee4478
         BinariTree<Integer> arbolPrueba = new BinariTree<>();
         arbolPrueba.insert(10);
         arbolPrueba.insert(5);
@@ -119,26 +108,16 @@ public class App {
         arbolPrueba.insert(15);
 
         Integer buscar = 15;
-        System.out.println("Buscando el numero: " + buscar);
+        System.out.println("Buscando el número: " + buscar);
 
-<<<<<<< HEAD
-=======
-        // Prueba Ejercicio 3 (DFS)
->>>>>>> a65bee2c3baaabcff1428f9de54af87471ee4478
+        // Ejercicio 3 (DFS)
         System.out.print("Ruta DFS: ");
         boolean encontradoDFS = Ejercicio3.dfs(arbolPrueba, buscar);
         System.out.println("\n¿Encontrado con DFS?: " + encontradoDFS);
 
-<<<<<<< HEAD
-=======
-        // Prueba Ejercicio 4 (BFS)
->>>>>>> a65bee2c3baaabcff1428f9de54af87471ee4478
+        // Ejercicio 4 (BFS)
         System.out.print("Ruta BFS: ");
         boolean encontradoBFS = Ejercicio4.bfs(arbolPrueba, buscar);
         System.out.println("\n¿Encontrado con BFS?: " + encontradoBFS);
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> a65bee2c3baaabcff1428f9de54af87471ee4478

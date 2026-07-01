@@ -39,3 +39,33 @@ Insetcion de un BTS e impresion en consola de manera vertical
         //Luego imprime el subarbol derecho
         printTreeRecursivo(actual.getRight(), nivel+1);
     }
+
+# Ejercicio 2: Inversión de un Árbol Binario
+
+### Este método toma un árbol existente y lo "espejea". La idea es intercambiar los hijos de cada nodo, logrando que el árbol quede invertido tanto en estructura como en contenido.
+
+
+public Node<Integer> invert(Node<Integer> root) {
+    System.out.println("Árbol Original:");
+    printTree(root);
+
+    invertRecursively(root);
+
+    System.out.println("Árbol Invertido:");
+    printTree(root);
+    
+    return root;
+}
+
+private void invertRecursively(Node<Integer> actual) {
+    if (actual == null) return;
+
+    // Guardamos el izquierdo y hacemos el cambio
+    Node<Integer> temp = actual.getLeft();
+    actual.setLeft(actual.getRight());
+    actual.setRight(temp);
+
+    // Seguimos bajando por ambos lados
+    invertRecursively(actual.getLeft());
+    invertRecursively(actual.getRight());
+}

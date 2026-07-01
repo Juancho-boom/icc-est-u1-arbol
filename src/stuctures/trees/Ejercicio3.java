@@ -23,7 +23,7 @@ public class Ejercicio3 {
     private static <T extends Comparable<T>> boolean dfsRecursivo(Node<T> actual, T target) {
         if (actual == null) return false;
 
-        System.out.print(actual.getValue() + " -> ");
+        System.out.print(actual.getValue() + " = ");
 
         if (actual.getValue().compareTo(target) == 0) return true;
         if (dfsRecursivo(actual.getLeft(), target)) return true;
@@ -34,7 +34,7 @@ public class Ejercicio3 {
     private static boolean dfsRecursivoInt(Node<Integer> actual, Integer target) {
         if (actual == null) return false;
 
-        System.out.print(actual.getValue() + " -> ");
+        System.out.print(actual.getValue() + " = ");
 
         if (actual.getValue().equals(target)) return true;
         if (dfsRecursivoInt(actual.getLeft(), target)) return true;

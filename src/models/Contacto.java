@@ -1,6 +1,6 @@
 package models;
 
-public class Contacto {
+public class Contacto implements Comparable<Contacto> {
     private String nombre;
     private String apellido;
     private String telefono;
@@ -40,12 +40,8 @@ public class Contacto {
         return "Contacto [nombre=" + nombre + ", apellido=" + apellido + ", telefono=" + telefono + "]";
     }
 
-<<<<<<< HEAD
-    public int compareTo(Contacto otro) {
-=======
     @Override
-    public int compareTo(Contacto otro){
->>>>>>> a65bee2c3baaabcff1428f9de54af87471ee4478
+    public int compareTo(Contacto otro) {
         return this.nombre.compareTo(otro.getNombre());
     }
 
@@ -85,10 +81,4 @@ public class Contacto {
             return false;
         return true;
     }
-    
-<<<<<<< HEAD
-}   
-=======
-}   
-
->>>>>>> a65bee2c3baaabcff1428f9de54af87471ee4478
+}

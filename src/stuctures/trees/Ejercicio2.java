@@ -36,7 +36,7 @@ public class Ejercicio2 {
         printTreeRecursivo(actual.getRight(), nivel + 1);
 
         for (int i = 0; i < nivel; i++) {
-            System.out.print("    ");
+            System.out.print(" ");
         }
         System.out.println(actual.getValue());
 
