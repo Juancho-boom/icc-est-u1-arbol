@@ -52,5 +52,14 @@ public class Graph<T> {
             System.out.println();
         }
     }
+
+    public Set<Node<T>> getVecinos(T current) {
+        return graph.getOrDefault(
+            new Node<>(current), 
+            new HashSet<>()
+    );
+}
+
+
     
 }

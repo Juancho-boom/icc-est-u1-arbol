@@ -4,6 +4,8 @@ import Collection.maps.Maps;
 import Collection.set.Sets;
 import models.Person;
 import stuctures.graphs.Graph;
+import stuctures.graphs.PathResult;
+import stuctures.graphs.implementatios.DFSPathFinder;
 import stuctures.trees.BinariTree;
 import stuctures.trees.Ejercicio1;
 import stuctures.trees.Ejercicio3;
@@ -12,15 +14,32 @@ import stuctures.trees.IntTree;
 
 public class App {
     public static void main(String[] args) throws Exception {
-      //  runIntTree();
-      //  runEjercicios();
+        //runIntTree();
+        //runEjercicios();
        // runPersonTree();
-       // runEjercicios3y4();
-       // runSets();
+        //runEjercicios3y4();
+        //runSets();
         //runMap();
-        runGraph();
+        //runGraph();
+        runGraph2();
     }
     
+    public static void runGraph2() {
+        Graph<String> g = new Graph<>();
+        g.addConexion("A", "B");
+        g.addConexion("A", "C");
+        g.addConexion("B", "D");
+        g.addConexion("C", "J");
+        g.addConexionUni("D", "E");
+        g.addConexion("E", "F");
+        g.addConexionUni("K", "J");
+
+        DFSPathFinder<String> dfs = new DFSPathFinder<>();
+    
+        PathResult<String> result1 = dfs.find(g, "A", "F");
+        PathResult<String> result2 = dfs.find(g, "A", "J");
+        PathResult<String> result3 = dfs.find(g, "A", "K");
+    }
 
     private static void runGraph() {
         Graph<String> g = new Graph<>();

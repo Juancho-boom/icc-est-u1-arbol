@@ -58,7 +58,7 @@ public class Node<T> {
             return false;
         if (getClass() != obj.getClass())
             return false;
-        Node other = (Node) obj;
+        Node other = (Node ) obj;
         if (value == null) {
             if (other.value != null)
                 return false;
