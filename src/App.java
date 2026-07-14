@@ -14,13 +14,13 @@ import stuctures.trees.IntTree;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        //runIntTree();
-        //runEjercicios();
-       // runPersonTree();
-        //runEjercicios3y4();
-        //runSets();
-        //runMap();
-        //runGraph();
+        runIntTree();
+        runEjercicios();
+        runPersonTree();
+        runEjercicios3y4();
+        runSets();
+        runMap();
+        runGraph();
         runGraph2();
     }
     

@@ -1,7 +1,6 @@
 package stuctures.graphs.implementatios;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
@@ -15,50 +14,38 @@ public class DFSPathFinder<T> implements PathFinder<T> {
 
     @Override
     public PathResult<T> find(Graph<T> graph, T start, T end) {
-        Set<Node<T>> visited = new LinkedHashSet<>();
-        List<Node<T>> path = new ArrayList<>();
+        Set<T> visited = new LinkedHashSet<>();
+        List<T> path = new ArrayList<>();
 
-
-        boolean encontrado = dfs(graph,start,end,visited,path);
+        boolean encontrado = dfs(graph, start, end, visited, path);
 
         if (!encontrado) {
             path.clear();
         }
 
-        return new PathResult<>(visited, path);
-
+        return new PathResult<>(visited, new LinkedHashSet<>(path));
     }
-    
-    private boolean dfs(Graph<T> graph,
-            T current, T end,
-            List<T> visited,
-            List<T> path){
 
+    private boolean dfs(Graph<T> graph, T current, T end, Set<T> visited, List<T> path) {
         visited.add(current);
         path.add(current);
-
-        Node<T> nC = new Node<T>(current);
-        Node<T> nE = new Node<T>(end);
-        if(nC.equals(nE)){
+        
+        if (current.equals(end)) {
             return true;
         }
 
-        for(Node<T> vecino : graph.getVecinos(current)){
-            if( ! visited.contains(vecino.getValue())){
-                boolean encon = dfs(graph,vecino.getValue(),end,visited,path);
-                if (encon) {
+        // Se usa current directamente si el método espera el valor T
+        for (Node<T> vecino : graph.getVecinos(current)) {
+            T valorVecino = vecino.getValue();
+            
+            if (!visited.contains(valorVecino)) {
+                if (dfs(graph, valorVecino, end, visited, path)) {
                     return true;
                 }
             }
         }
         
+        path.remove(path.size() - 1);
         return false;
     }
-
-    @Override
-    public String toString() {
-        return "DFSPathFinder []";
-    }
-    
-    
 }
