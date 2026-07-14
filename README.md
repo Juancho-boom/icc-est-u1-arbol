@@ -11,3 +11,5 @@
 -----------------------
 - **Fecha:** 17/06/2026
 - ***Creamos la clase BinariTree identificando la ubicacion a la cual va la persona, numero*** 
+
+hola mundo
